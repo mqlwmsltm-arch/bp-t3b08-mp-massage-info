@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 마사지 정보 | 씨발 제대로 알고 받자</title>
+    <meta name="description" content="마포에서 마사지 받을 생각이면? 가격, 후기, 분위기 다 까발린다. 니 돈 아껴줄 마포 마사지 정보. 010-6279-0862">
+    <meta name="keywords" content="마포 마사지, 마포 마사지 정보, 마포 마사지 추천, 마포 마사지 가격, 마포 마사지 후기, 마포 마사지 잘하는 곳">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b08-mp-massage-info.vercel.app">
+    <meta property="og:title" content="마포 마사지 정보 | 씨발 제대로 알고 받자">
+    <meta property="og:description" content="마포에서 마사지 받을 생각이면? 가격, 후기, 분위기 다 까발린다. 니 돈 아껴줄 마포 마사지 정보.">
+    <meta property="og:type" content="website">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            background-color: #e8e4db;
+            color: #1a1a1a;
+            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            padding: 1.25rem;
+            min-height: 100vh;
+            position: relative;
+            z-index: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: repeating-linear-gradient(45deg, rgba(60, 60, 50, 0.04) 0px, rgba(60, 60, 50, 0.04) 2px,
+                                      transparent 2px, transparent 6px),
+                              repeating-linear-gradient(-45deg, rgba(60, 60, 50, 0.03) 0px, rgba(60, 60, 50, 0.03) 1px,
+                                      transparent 1px, transparent 5px);
+            pointer-events: none;
+            z-index: -1;
+        }
+        h1, h2, h3, h4, p, ul, ol, figure, blockquote, dl, dd, fieldset, legend, textarea, pre, iframe, hr {
+            margin: 0 0 1.25rem 0;
+            padding: 0;
+            border: 0;
+        }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border-left: 0.75rem solid #c0392b;
+            padding-left: 1rem;
+            word-break: break-word;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 0.25rem solid #1a1a1a;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 0.2rem solid #c0392b;
+            font-weight: 600;
+            transition: background 0.1s, color 0.1s;
+        }
+        a:hover, a:focus {
+            background-color: #c0392b;
+            color: #e8e4db;
+            border-bottom-color: #1a1a1a;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: #1a1a1a;
+            color: #e8e4db;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 2.5rem;
+            border: 4px solid #c0392b;
+            position: relative;
+        }
+        nav a {
+            color: #e8e4db;
+            border-bottom: none;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            padding: 0.25rem 0.5rem;
+            margin: 0 0.25rem;
+            border: 2px solid transparent;
+        }
+        nav a:hover {
+            background: #c0392b;
+            color: #1a1a1a;
+            border-color: #e8e4db;
+        }
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+        .hamburger-menu span {
+            width: 28px;
+            height: 4px;
+            background: #e8e4db;
+            margin: 4px 0;
+            border-radius: 0;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+        }
+        .tel-link {
+            font-weight: 900;
+            background: #c0392b;
+            color: #e8e4db !important;
+            padding: 0.25rem 0.8rem !important;
+            border: 2px solid #c0392b !important;
+            letter-spacing: 0.05em;
+        }
+        .tel-link:hover {
+            background: #1a1a1a !important;
+            border-color: #c0392b !important;
+            color: #c0392b !important;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+        }
+        .card {
+            background: #f2efe8;
+            border: 4px solid #1a1a1a;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 8px 8px 0 #1a1a1a;
+            transition: 0.1s linear;
+        }
+        .card:hover {
+            box-shadow: 12px 12px 0 #1a1a1a;
+            transform: translate(-2px, -2px);
+        }
+        .card h3 {
+            margin-top: 0;
+            border-left: 6px solid #c0392b;
+            padding-left: 0.75rem;
+        }
+        .blog-header {
+            margin-bottom: 2.5rem;
+        }
+        .blog-header p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: #1a1a1a;
+            color: #e8e4db;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border: 2px solid #c0392b;
+        }
+        .blog-post blockquote {
+            border-left: 0.5rem solid #c0392b;
+            padding: 1rem 1.5rem;
+            background: #dad6cc;
+            font-style: italic;
+            font-weight: 600;
+            margin: 1.5rem 0;
+        }
+        .blog-post ul, .blog-post ol {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .blog-post li {
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #e8e4db;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-right: 0.5rem;
+            border: 2px solid #c0392b;
+        }
+        hr {
+            border: 0;
+            border-top: 6px double #1a1a1a;
+            margin: 2.5rem 0;
+        }
+        .footer-meta {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 4px solid #1a1a1a;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 0.75rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 1rem 0 0.5rem 0;
+                border-top: 2px solid #c0392b;
+                margin-top: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0.3rem 0;
+                padding: 0.5rem 0.3rem;
+                border-bottom: 1px solid #3a3a3a;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .card {
+                padding: 1rem 1.2rem;
+                box-shadow: 6px 6px 0 #1a1a1a;
+            }
+            .card:hover {
+                box-shadow: 8px 8px 0 #1a1a1a;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">마포마사지</div>
+        <div class="hamburger-menu" onclick="this.nextElementSibling.classList.toggle('show')" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links">
+            <a href="/">홈</a>
+            <a href="/info">정보</a>
+            <a href="/blog">블로그</a>
+            <a href="/review">후기</a>
+            <a href="/price">가격</a>
+            <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="blog-header">
+            <h1>마포 마사지 정보<br>씹먹는 블로그</h1>
+            <p>🔥 오직 내 돈 아끼는 정보만 까발린다</p>
+        </div>
+
+        <article class="blog-post card">
+            <div class="tag">실전정보</div>
+            <div class="tag">마포마사지</div>
+            <h2>“마포 마사지, 니가 제발 알았으면 하는 3가지”</h2>
+            <p><strong>작성일:</strong> 2025.03.28 | <strong>필자:</strong> 마사지씹어본놈</p>
+
+            <p>야, 마포에서 마사지 받을 생각이면 일단 이 글부터 봐라. 내가 돈 존나 까먹고 나서야 알게된 씨발 같은 현실을 니가 똑같이 겪지 말라고 쓰는거다. 마포 마사지 업소들, SNS에서 형광등 켜놓고 간판만 번쩍인다고 다 좋은거 아니다. <strong>가격, 후기, 분위기</strong> – 이 세 개만 제대로 걸러도 반은 먹고 들어간다.</p>
+
+            <blockquote>
+                “마포에서 7만원 내고 스웨디시 받았다가 20분 만에 끝나고 ‘서비스 끝’ 소리 들었다. 그냥 호구 인증샷 찍은 기분.”
+            </blockquote>
+
+            <h3>1. 가격: 니가 생각한 그 가격, 거품일 확률 90%</h3>
+            <p>마포 마사지 샵들, 기본 코스 6~9만원. 근데 거기서 ‘아로마’, ‘스포츠’ 같은 말 붙이면 12만원까지 훌쩍. 솔직히 관리사 손기술이면 모르겠는데, 객관적으로 <strong>90분에 10만원 넘으면 무조건 의심해라.</strong> 내가 마포에서 5군데 가본 결과, 진짜 실력 있는 곳은 오히려 7~8만원대에 단단한 마사지 푸는 곳이더라. 비싸다고 좋은거 아니다. 돈 아까우면 전화해서 가격 흥정?까진 아니더라도 “할인이나 패키지 있냐”고 물어봐라. 없으면 껒이.</p>
+
+            <h3>2. 후기: 네이버 평점 4.5 이상은 거르셈</h3>
+            <p>마포 마사지 네이버 평점 4.5~4.9? 90%는 이벤트나 친구들이 박은 점수다. 내가 직접 뒤져본 결과, <strong>3.8~4.3 사이에 진짜 후기</strong>가 많았다. 특히 “관리사 불친절”, “시간 안 지킴” 같은 마이너스 후기가 3~4개 이상이면 무조건 패스. 그리고 카카오맵 리뷰도 꼭 봐라. 거기는 이벤트 참여율 낮아서 정직한 글이 많다. “마포 마사지 후기” 검색해서 블로그 보지 말고, 지도 리뷰로 실체를 봐라.</p>
+
+            <ul>
+                <li><strong>✔️ 팁:</strong> “마포 마사지 정보” 로 검색해서 최신 후기(1개월 내)만 걸러라. 오래된 글은 업소가 바뀌었을 수 있다.</li>
+                <li><strong>✔️ 체크:</strong> 전화 통화가 짧거나, “와서 보면 돼요” 하는 곳은 걸러. 전문성 제로.</li>
+            </ul>
+
+            <h3>3. 분위기: 인테리어에 속지 마라. 청결이 먼저다</h3>
+            <p>마포 마사지 중에 감성 인테리어로 꾸며놓고, 들어가면 타월에서 냄새나는 곳 있었다. 씨발, 아무리 조명 어둡고 음악 틀어놔도 청결 안 되면 마사지 받다가 더 찝찝해진다. 꼭 예약 전에 <strong>“샤워실, 수건, 침대 시트”</strong> 위생 상태를 확인해라. 전화로 “수건은 일회용인가요?” 라고 물어보면 대답 더듬는 곳은 바로 컷. 분위기에 속지 말고, 바닥에 머리카락이나 물때 있는지 꼭 보자. 마사지 받기 전에 화장실 한번 다녀오는 것도 방법이다.</p>
+
+            <blockquote>
+                “마포 마사지 중 A샵은 인테리어 미쳤는데, 마사지 오일 온도도 안 맞추고 손도 차가웠음. 인테리어에 1000만원 쓸 돈으로 관리사 교육이나 해라.”
+            </blockquote>
+
+            <hr>
+
+            <h3>🔥 마포 마사지 정보 – 요약 정리</h3>
+            <ol>
+                <li><strong>가격:</strong> 90분 7~9만원 적정. 그 이상은 이유를 묻고, 할인을 요구해라.</li>
+                <li><strong>후기:</strong> 네이버 평점 4.3 이하, 카카오맵 리뷰 10개 이상인 곳이 진짜.</li>
+                <li><strong>분위기:</strong> 청결이 최우선. 인테리어는 부차적. 관리사 손끝이 예민해야 한다.</li>
+                <li><strong>전화예약:</strong> “마포 마사지 정보” 보고 전화했는데 친절하지 않으면 가지 마라. 서비스는 입구부터 시작이다.</li>
+            </ol>
+
+            <p
+</body>
+</html>
